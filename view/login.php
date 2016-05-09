@@ -19,18 +19,25 @@
       <div class="row" class="container">
         <form class="col s12">
           <div class="row">
+
             <div class="input-field col s4 offset-s4">
-              <i class="material-icons prefix">account_circle</i>
+              <i class="material-icons prefix">email</i>
               <input id="icon_prefix" type="text" class="validate">
               <label for="icon_prefix">Email</label>
             </div>
+            
             <div class="input-field col s4 offset-s4">
               <i class="material-icons prefix">lock</i>
               <input id="icon_telephone" type="tel" class="validate">
-              <label for="icon_telephone">Mot de passe</label>
+              <label for="icon_telephone">Password</label>
             </div>
+
           </div>
         </form>
+
+        <div class="row" align="center">
+          <a href="signin.php">Sign in</a>
+        </div>
       </div>
     </main>
 
