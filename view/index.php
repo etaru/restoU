@@ -6,6 +6,7 @@
       <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
       <!--Import materialize.css-->
       <link type="text/css" rel="stylesheet" href="../css/materialize.min.css"  media="screen,projection"/>
+      <!--Import restoU.css-->
       <link rel="stylesheet" type="text/css" href="../css/restoU.css">
 
       
@@ -18,8 +19,8 @@
     <?php include("../header.php"); ?>
 
     <main>
-      <div class="row" class="container">
-        <div class="col s2 offset-s2">
+      <div class="row">
+        <div class="col s2 offset-s2"">
           <div class="card orange darken-1">
             <div class="card-content white-text">
               <span class="card-title">PIZZERIA</span>

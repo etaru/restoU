@@ -23,14 +23,14 @@
 
             <div class="input-field col s4 offset-s4">
               <i class="material-icons prefix">account_circle</i>
-              <input id="icon_telephone" type="tel" class="validate">
-              <label for="icon_telephone">First Name</label>
+              <input id="icon_prefix" type="text" class="validate">
+              <label for="icon_prefix">First Name</label>
             </div>
 
             <div class="input-field col s4 offset-s4">
               <i class="material-icons prefix">account_circle</i>
-              <input id="icon_telephone" type="tel" class="validate">
-              <label for="icon_telephone">Last Name</label>
+              <input id="icon_prefix" type="text" class="validate">
+              <label for="icon_prefix">Last Name</label>
             </div>
 
             <div class="input-field col s4 offset-s4">
@@ -41,8 +41,8 @@
             
             <div class="input-field col s4 offset-s4">
               <i class="material-icons prefix">lock</i>
-              <input id="icon_telephone" type="tel" class="validate">
-              <label for="icon_telephone">Password</label>
+              <input id="icon_prefix" type="password" class="validate">
+              <label for="icon_prefix">Password</label>
             </div>
           </div>
         </form>

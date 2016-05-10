@@ -20,7 +20,7 @@
   </div>
   <div class="footer-copyright red lighten-1">
     <div class="container">
-      © 2016 Copyright Text
+      © 2016 Copyright Erick Taru
     </div>
   </div>
 </footer>

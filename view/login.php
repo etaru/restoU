@@ -28,15 +28,16 @@
             
             <div class="input-field col s4 offset-s4">
               <i class="material-icons prefix">lock</i>
-              <input id="icon_telephone" type="tel" class="validate">
-              <label for="icon_telephone">Password</label>
+              <input id="icon_prefix" type="password" class="validate">
+              <label for="icon_prefix">Password</label>
             </div>
 
           </div>
         </form>
 
         <div class="row" align="center">
-          <a href="signin.php">Sign in</a>
+          Don't have an account ?
+          <a href="signin.php"> Sign up !</a>
         </div>
       </div>
     </main>
