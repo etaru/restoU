@@ -20,7 +20,7 @@
 
     <main>
       <div class="row">
-        <div class="col s2 offset-s2"">
+        <div class="col s10 l2 offset-l2 offset-s1">
           <div class="card orange darken-1">
             <div class="card-content white-text">
               <span class="card-title">PIZZERIA</span>
@@ -35,7 +35,7 @@
           </div>
         </div>
 
-        <div class="col s2">
+        <div class="col s10 l2 offset-s1">
           <div class="card green darken-1">
             <div class="card-content white-text">
               <span class="card-title">GRILL</span>
@@ -50,7 +50,7 @@
           </div>
         </div>
 
-        <div class="col s2">
+        <div class="col s10 l2 offset-s1">
           <div class="card cyan darken-1">
             <div class="card-content white-text">
               <span class="card-title">AMERIQUE</span>
@@ -65,7 +65,7 @@
           </div>
         </div>
 
-        <div class="col s2">
+        <div class="col s10 l2 offset-s1">
           <div class="card purple darken-1">
             <div class="card-content white-text">
               <span class="card-title">AFRIQUE</span>
@@ -79,8 +79,6 @@
             </div>
           </div>
         </div>
-
-
       </div>
       
 
@@ -91,5 +89,6 @@
     <!--Scripts-->
       <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
       <script type="text/javascript" src="../js/materialize.min.js"></script>
+      <script type="text/javascript" src="../js/init.js"></script>
 
   </html>
