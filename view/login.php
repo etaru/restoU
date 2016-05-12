@@ -22,6 +22,12 @@
           </div>
 
         </div>
+
+        <!--submit button-->
+        <div class="row center-align">
+          <button class="btn waves-light btn light-green darken-1" type="submit" name="action">send</button>
+        </div>
+
       </form>
 
       <!--sign up link-->

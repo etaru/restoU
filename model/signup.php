@@ -10,10 +10,10 @@
 			$bd=connexion_bd();
 
 			//SQL request for inserting user in user table
-			$req = $bd->prepare('INSERT INTO user(idUser, firstName, lastName, email, password, admin) VALUES ("", :firstName, :lastName, :email, :password, :admin)');
+			$req=$bd->prepare('INSERT INTO user(idUser, firstName, lastName, email, password, admin) VALUES ("", :firstName, :lastName, :email, :password, :admin)');
 
 			//admin is off (0) by default
-			$admin = 0;
+			$admin=0;
 
 			$req->bindParam(':firstName', $firstName);
 			$req->bindParam(':lastName', $lastName);
@@ -30,11 +30,12 @@
 			require_once("connexion_bd.php");
 			$bd=connexion_bd();
 
-			$req = $bd->prepare('SELECT email FROM user WHERE email = :em');
+			//SQL request to retrieve emails
+			$req=$bd->prepare('SELECT email FROM user WHERE email = :em');
 
 			$req->execute(array(':em' => $email));
 
-			$emails = $req->fetch();
+			$emails=$req->fetch();
 
 			return $emails;
 		}

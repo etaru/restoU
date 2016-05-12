@@ -7,6 +7,15 @@
 ?>
 
 <main>
+
+  <!--success chip-->
+  <div class="section center-align">
+    <div class="chip light-green darken-1">
+      Successfull registration
+      <i class="material-icons">done</i>
+    </div>
+  </div>
+
   <div class="row" class="container">
     <!--all fields disabled-->
     <form class="col s12" method="POST" action="../controller/signup.php">
@@ -47,14 +56,6 @@
           <label for="verifPassword">Password verification</label>
         </div>
 
-      </div>
-
-      <!--success chip-->
-      <div class="section center-align">
-        <div class="chip light-green darken-1">
-          Successfull registration
-          <i class="material-icons">done</i>
-        </div>
       </div>
 
       <!--home button-->
