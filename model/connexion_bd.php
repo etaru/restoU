@@ -1,3 +1,4 @@
+<!--Connection to the database-->
 <?php
 	function connexion_bd()
 	{
