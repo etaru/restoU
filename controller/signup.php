@@ -8,6 +8,19 @@
 	$password = sha1(htmlspecialchars($_POST['password']));
 	$verifPassword= sha1(htmlspecialchars($_POST['verifPassword']));
 
-	addUser($firstName, $lastName, $email, $password);
+	$emails=SIGNUP::verifUser($email);
+
+	if(!empty($emails)) {
+		header('Location: ../view/signupFail.php');
+	}
+	elseif (empty($firstName)||empty($lastName)||empty($email)||empty($password)||empty($verifPassword)) {
+		header('Location: ../view/signupIncomplete.php');
+	}
+	elseif ($password!=$verifPassword) {
+		header('Location: ../view/signupVerifPassword.php');
+	}
+	else {
+		SIGNUP::addUser($firstName, $lastName, $email, $password);
 
 	header('Location: ../view/signupSuccess.php');
+	}
