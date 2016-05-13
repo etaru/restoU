@@ -1,7 +1,18 @@
-<!--Login view-->
+<!--LoginFail view
+    same as login, redirected
+    here when error in login
+-->
 <?php include("../header.php"); ?>
   
   <main>
+    <!--warning tag-->
+    <div class="section center-align">
+      <div class="chip orange darken-1">
+        Invalid email or password !
+        <i class="material-icons left">warning</i>
+      </div>
+    </div>
+
     <div class="row" class="container">
       <!--form to fill-->
       <form class="col s12" method="POST" action="../controller/login.php">
