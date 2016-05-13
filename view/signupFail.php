@@ -2,9 +2,7 @@
     same as signup, redirected here
     when user already exists
 -->
-<?php 
-  include("../header.php");
-?>
+<?php include("../header.php"); ?>
 
 <main>
   <!--warning tag-->

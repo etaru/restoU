@@ -2,9 +2,7 @@
     same as signup, redirected here
     when missing fields
 -->
-<?php 
-  include("../header.php");
-?>
+<?php include("../header.php"); ?>
 
 <main>
   <!--warning tag-->

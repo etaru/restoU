@@ -10,11 +10,11 @@
 			$bd=connexion_bd();
 
 			//SQL request to retrieve users
-			$req=$bd->prepare("SELECT * FROM user WHERE email='$email' AND password='$password';");
+			$req=$bd->prepare("SELECT COUNT(*) FROM user WHERE email=? AND password=?;");
 
-			$req->execute();
+			$req->execute(array($email, $password));
 
-			$users=$req->rowCount();
+			$users=$req->fetch();
 
 			return $users;
 		}

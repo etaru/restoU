@@ -1,7 +1,5 @@
 <!--Signup view-->
-<?php 
-  include("../header.php");
-?>
+<?php include("../header.php"); ?>
 
 <main>
   <div class="row" class="container">

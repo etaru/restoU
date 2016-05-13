@@ -2,9 +2,7 @@
     redirected here
     when sign up is successful
 -->
-<?php 
-  include("../header.php");
-?>
+<?php include("../header.php"); ?>
 
 <main>
 

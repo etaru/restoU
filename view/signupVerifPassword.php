@@ -2,9 +2,7 @@
     same as signup, redirected here
     when password verification failed
 -->
-<?php 
-  include("../header.php");
-?>
+<?php include("../header.php"); ?>
 
 <main>
   <!--warning tag-->
