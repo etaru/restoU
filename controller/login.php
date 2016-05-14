@@ -34,7 +34,7 @@
 			setcookie($cookieEmail, $cookieEmailValue, time()+1800, "/", null, false, true);
 			//setcookie($cookieAdmin, $cookieAdminValue, time()+1800, "/", null, false, true);
 
-			include_once("../view/index.php");
+			include_once("../controller/index.php");
 		}
 	}
 	else {

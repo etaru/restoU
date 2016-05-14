@@ -64,7 +64,7 @@
 
       </ul>
 
-      <a href="index.php" class="brand-logo">Resto'U</a>
+      <a href="index.php" class="brand-logo">Resto'U<i class="material-icons tiny left">restaurant</i></a>
 
       <ul id="nav-mobile" class="right hide-on-med-and-down">
         

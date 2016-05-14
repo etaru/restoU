@@ -23,4 +23,4 @@
 		$isAdmin='NO';
 	}
 
-	include_once('../view/Myprofile.php');
+	include_once('../view/myprofile.php');

@@ -1,3 +1,4 @@
+<!--Myprofile view-->
 <?php include("../header.php"); ?>
 
 <main>
