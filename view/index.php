@@ -1,6 +1,11 @@
 <?php include("../header.php"); ?>
 
 <main>
+  <div class="container center-align">
+    <h4>Check out today's meals !</h4>
+    <p>Don't hesitate to create your account and start giving your feedback !</p>
+  </div>
+
   <div class="center-align">
     <h5>
       <?php

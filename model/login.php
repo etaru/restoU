@@ -35,4 +35,17 @@
  			return $admins;
 
 		}
+
+		//function to retrieve user's email
+		public static function userEmail()
+		{
+		    require_once("connexion_bd.php");
+		    $bd=connexion_bd();
+
+		    $req = $bd->query("SELECT email FROM user");
+
+		    $users= $req->fetchAll();
+
+		    return $users;
+		}
 	}

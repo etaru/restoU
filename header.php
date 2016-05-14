@@ -18,7 +18,7 @@
     </head>
 
     <header>
-      <?php include("navBar.php"); ?>
+      <?php include("navBarConnected.php"); ?>
     </header>
 
     <!--Scripts-->
