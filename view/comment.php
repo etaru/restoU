@@ -41,6 +41,7 @@
 					            <button type='submit' class='btn btn-default' >Add your comment</button>
 					   		</form>
 					    </div>";
+
 				    }
 				?>
 

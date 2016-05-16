@@ -23,12 +23,13 @@
 		}
 
 		//function to add comment in database
-		public static function addComment($newComment){
+		public static function addComment($newComment)
+		{
 
 			require_once("connexion_bd.php");
 			$bd=connexion_bd();
 
-			$req = $bd->prepare('INSERT INTO comment VALUES (:comment, :meal, :idUser)');
+			$req = $bd->prepare('INSERT INTO comment (content, idM, idUser) VALUES (:comment, :meal, :idUser)');
 
 			$req->execute($newComment);
 
