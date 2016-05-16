@@ -54,7 +54,7 @@
 
       <!--myprofile button-->
       <div class="section center-align">
-        <a href="myprofile.php" class="waves-effect waves-light btn red darken-1"><i class="material-icons left">account_circle</i>My profile</a>
+        <a href="../controller/login.php" class="waves-effect waves-light btn red darken-1"><i class="material-icons left">account_circle</i>Log in</a>
       </div>
 
     </form>

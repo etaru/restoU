@@ -6,35 +6,29 @@
 
 	if(isset($_POST["email"]) && isset($_POST["password"])) {
 
-		//cookie names
+		//cookie name
 		$cookieEmail="connected";
-		//$cookieAdmin="admin";
 
 		//retrieve information of form
-		$email=$_POST['email'];
+		$email=htmlspecialchars($_POST['email']);
 		$password=sha1($_POST['password']);
 
-		/*retrieve admins from database
-		$admins=LOGIN::isAdmin($email);
-		foreach ($admins as $admin) {
-			$isadmin=$admin["admin"];
-		}*/
+		$tab=array('email' => $email,);
+		
+        $data=LOGIN::loggedin($tab);
 
-		$users=LOGIN::loggedin($email,$password);
+        if ($data['password'] == $password) {
 
-		if($users[0]==1) {
-			include_once("../view/loginFail.php");	
-		}
-		else {
 			//cookie values
 			$cookieEmailValue=$email;
-			//$cookieAdminValue=$isadmin;
 
 			//cookie creation, duration of 30min (true attribute is for httponly)
 			setcookie($cookieEmail, $cookieEmailValue, time()+1800, "/", null, false, true);
-			//setcookie($cookieAdmin, $cookieAdminValue, time()+1800, "/", null, false, true);
 
-			include_once("../controller/index.php");
+			include_once("../controller/index.php");	
+		}
+		else {
+			include_once("../view/loginFail.php");
 		}
 	}
 	else {

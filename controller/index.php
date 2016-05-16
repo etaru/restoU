@@ -12,4 +12,13 @@
     	$statusEvening[]=$room['statusEvening'];
 	}
 
+	$meals=INDEX::getMenu();
+
+	foreach ($meals as $meal) {
+    	$contentNoon[]=$meal['contentNoon'];
+    	$contentEvening[]=$meal['contentEvening'];
+    	$likeCounter[]=$meal['likeCounter'];
+    	$idM[]=$meal['idM'];
+	}
+
 	include_once("../view/index.php");

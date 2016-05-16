@@ -5,9 +5,9 @@
   $current = basename ($path);
   
   //verifies user is connected with cookie
-  if (isset($_COOKIE['connected'])){
+  if (isset($_COOKIE['connected'])) {
    
-    require_once('../model/login.php');
+    include_once('../model/login.php');
 
     //retrieves users
     $users=LOGIN::userEmail();
@@ -15,7 +15,7 @@
     //set email to right user
     foreach ($users as $user) {
 
-      if ($user['email'] == $_COOKIE['connected']){
+      if ($user['email'] == $_COOKIE['connected']) {
         $email=$user['email'];
       }
 
@@ -41,13 +41,12 @@
 
         <?php if (isset($_COOKIE['connected'])){ ?>
 
-          <li><a href="myprofile.php">My profile</a></li>
+          <li><a href="../controller/myprofile.php">My profile</a></li>
 
           <?php if (isset($_COOKIE['connected']) && $isadmin>0) { ?>
 
-            <li><a href="room.php">Rooms</a></li>
-            <li><a href="addMenu.php">Add menu</a></li>
-            <li><a href="users.php">Users</a></li>
+            <li><a href="../controller/room.php">Rooms</a></li>
+            <li><a href="../controller/addMenu.php">Add menu</a></li>
             
           <?php } ?>
 
@@ -57,14 +56,14 @@
 
         else { ?>
 
-          <li><a href="signup.php">Sign up</a></li>
-          <li><a href="login.php">Log in</a></li>
+          <li><a href="../controller/signup.php">Sign up</a></li>
+          <li><a href="../controller/login.php">Log in</a></li>
 
         <?php }?>
 
       </ul>
 
-      <a href="index.php" class="brand-logo">Resto'U<i class="material-icons tiny left">restaurant</i></a>
+      <a href="../controller/index.php" class="brand-logo">Resto'U<i class="material-icons tiny left">restaurant</i></a>
 
       <ul id="nav-mobile" class="right hide-on-med-and-down">
         
@@ -74,24 +73,22 @@
             
           <?php if (isset($_COOKIE['connected']) && $isadmin>0) { ?>
 
-            <li class="<?php if (($current == 'room.php')||($current == 'room.php')){ echo "active";} else{ echo'no_current';}?>"><a href="room.php">Rooms</a></li>
+            <li class="<?php if (($current == '../controller/room.php')||($current == '../controller/room.php')){ echo "active";} else{ echo'no_current';}?>"><a href="../controller/room.php">Rooms</a></li>
 
-            <li class="<?php if (($current == 'addMenu.php')||($current == 'addMenu.php')){ echo "active";} else{ echo'no_current';}?>"><a href="addMenu.php">Add menu</a></li>
-
-            <li class="<?php if ($current == 'users.php'){ echo "active";} else{ echo'no_current';}?>"><a href="users.php">Users</a></li>
+            <li class="<?php if (($current == '../controller/addMenu.php')||($current == '../controller/addMenu.php')){ echo "active";} else{ echo'no_current';}?>"><a href="../controller/addMenu.php">Add menu</a></li>
 
           <?php } ?>
 
-          <li class="<?php if ($current == 'myprofile.php'){ echo "active";} else{ echo'no_current';}?>"><a href="myprofile.php">My profile</a></li>
+          <li class="<?php if ($current == '../controller/myprofile.php'){ echo "active";} else{ echo'no_current';}?>"><a href="../controller/myprofile.php">My profile</a></li>
           
-          <li class="<?php if ($current == 'logout.php'){ echo "active";} else{ echo'no_current';}?>"><a href="../controller/logout.php">Log out</a></li>
+          <li class="<?php if ($current == '../controller/logout.php'){ echo "active";} else{ echo'no_current';}?>"><a href="../controller/logout.php">Log out</a></li>
 
         <?php }
 
         else { ?>
 
-          <li class="<?php if ($current == 'signup.php'){ echo "active";} else{ echo'no_current';}?>"><a href="signup.php">Sign up</a><i class="material-icons prefix left">account_circle</i></li>
-          <li class="<?php if ($current == 'login.php'){ echo "active";} else{ echo'no_current';}?>"><a href="login.php">Log in</a></li>
+          <li class="<?php if ($current == '../controller/signup.php'){ echo "active";} else{ echo'no_current';}?>"><a href="../controller/signup.php">Sign up</a><i class="material-icons prefix left">account_circle</i></li>
+          <li class="<?php if ($current == '../controller/login.php'){ echo "active";} else{ echo'no_current';}?>"><a href="../controller/login.php">Log in</a></li>
 
         <?php }?>
 

@@ -3,21 +3,22 @@
 	class LOGIN
 	{
 		//function to retrieve users
-		public static function loggedin($email, $password)
+		public static function loggedin($loggedin)
 		{
 			//connection database
 			require_once("connexion_bd.php");
 			$bd=connexion_bd();
 
-			//SQL request to retrieve users
-			$req=$bd->prepare("SELECT COUNT(*) FROM user WHERE email=? AND password=?;");
+			//SQL request to retrieve information on user
+			$req=$bd->prepare('SELECT * FROM user WHERE email = :email');
+            
+	        $req->execute($loggedin);
 
-			$req->execute(array($email, $password));
+	        //retrieve data in an array
+	        $data=$req->fetch();
 
-			$users=$req->fetch();
-
-			return $users;
-		}
+	        return $data;
+			}
 
 		//function to konw if admin or not
 		public static function isAdmin($email)

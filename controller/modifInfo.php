@@ -6,30 +6,62 @@
 	include_once('../model/myprofile.php');
 	include_once('../model/modifInfo.php');
 
-	$infos=INFO::getInfo();
+	if (isset($_COOKIE['connected'])) {
+   
+	    include_once('../model/login.php');
 
-	foreach ($infos as $info) {
-		if ($info['email'] == $_COOKIE['connected']){
-        	$firstName=$info['firstName'];
-        	$lastName=$info['lastName'];
-      }
-	}
+	    //retrieves users
+	    $users=LOGIN::userEmail();
 
+	    //set email to right user
+	    foreach ($users as $user) {
 
-	if (isset($_POST['email'])) {
-		$email = htmlspecialchars($_POST['email']);
-	
-		//retrieve email address
-		$emails=SIGNUP::verifUser($email);
+	      if ($user['email'] == $_COOKIE['connected']) {
+	        $email=$user['email'];
+	      }
 
-		if(empty($email)||!empty($emails)) {
-			include_once('../view/modifInfoFail.php');
+	    }
+	  
+	    //retrieve admins
+	    $admins=LOGIN::isAdmin($email);
+
+	    //set admin variable to user
+	    foreach ($admins as $admin) {
+	      $isadmin=$admin["admin"];
+	    }
+
+		$infos=INFO::getInfo();
+
+		foreach ($infos as $info) {
+			if ($info['email'] == $_COOKIE['connected']){
+	        	$firstName=$info['firstName'];
+	        	$lastName=$info['lastName'];
+	        	$idUser = $info['idUser'];
+	      }
 		}
-		else {
-			MODIFINFO::modifEmail($email);
-			include_once('../view/modifInfoSuccess.php');
+
+		if (isset($_POST['email'])) {
+			$email = htmlspecialchars($_POST['email']);
+			//retrieve email address
+			$emails=SIGNUP::verifUser($email);
+
+			if(empty($email)||!empty($emails)) {
+				include_once('../view/modifInfoFail.php');
+			}
+			else {
+				//cookies expires, need to login
+				setcookie("connected", "val", time() -(120), "/", null, false, true);
+				setcookie("admin", "val", time() -(120), "/", null, false, true);
+
+				MODIFINFO::modifEmail($email, $idUser);
+
+				include_once('../view/modifInfoSuccess.php');
+			}
+		}
+		else{
+			include_once('../view/modifInfo.php');
 		}
 	}
-	else{
-		include_once('../view/modifInfo.php');
+	else {
+		include_once('../controller/login.php');
 	}

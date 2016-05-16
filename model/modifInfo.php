@@ -7,28 +7,19 @@
 class MODIFINFO{
 
 	//function to update email
-	public static function modifEmail($email)
+	public static function modifEmail($email, $idUser)
 	{
 		//Connection to database
 		require_once("connexion_bd.php");
 	 	$bd=connexion_bd();
 
 	 	//SQL request to change email
-		$req = $bd->prepare('UPDATE user SET email=:email WHERE email=:em');
+		$req = $bd->prepare('UPDATE user SET email=:email WHERE idUser=:idUser');
 
-		$req->bindParam(':email', $firstName);
+		$req->bindParam(':email', $email);
+		$req->bindParam(':idUser', $idUser);
 
 		$req->execute();
-	}
-
-	//function for admin to delete user
-	public static function deleteUser($email)
-	{
-		require_once("connexion.php");
-	 	$bdd=connexion();
-	$req = $bdd->prepare('DELETE FROM Users WHERE pseudo=:pseudo');
-	$req->bindParam(':pseudo', $pseudo);
-	$req->execute();
 	}
 
 	//function for admin to change user to admin
@@ -38,7 +29,7 @@ class MODIFINFO{
 	 	$bd=connexion_bd();
 
 	 	//SQL request to change user to admin
-		$req = $bdd->prepare('UPDATE Users SET admin=:admin WHERE pseudo=:pseudo');
+		$req = $bdd->prepare('UPDATE user SET admin=:admin WHERE email=:email');
 
 		$admin=1;
 

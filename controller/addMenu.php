@@ -1,8 +1,10 @@
-<!--Room controller-->
+<!--AddMenu controller
+	functionnality not working-->
+
 <?php
 	
 	//get information of model
-	include_once('../model/room.php');
+	include_once('../model/addMenu.php');
 
 	if (isset($_COOKIE['connected'])) {
    
@@ -28,17 +30,30 @@
 	      $isadmin=$admin["admin"];
 	    }
 
-		$rooms=ROOM::getRoom();
+		$rooms=MENU::getRoom();
 
 		foreach ($rooms as $room) {
-	    	$name=$room['name'];
-	    	$statusNoon=$room['statusNoon'];
-	    	$statusEvening=$room['statusEvening'];
-
+	    	$name[]=$room['name'];
+	    	$idR=$room['idR'];
 		}
 
-		include_once('../view/room.php');
-	}
+		/*if (isset($_POST['menu']) && value!=NULL) {
+
+			$menu = htmlspecialchars($_POST['menu']);
+			$idR = htmlspecialchars($_POST['idR']);
+
+			if(empty($menu)||$idR=NULL) {
+				include_once('../view/addMenuFail.php');
+			}
+			else {
+				MENU::addMenu($menu, $idR);
+
+				include_once('../view/addMenuSucces.php');
+			}*/
+
+			include_once('../view/addMenu.php');
+
+		}
 	else {
 		include_once('../controller/login.php');
 	}

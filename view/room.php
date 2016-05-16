@@ -2,7 +2,7 @@
 <?php include("../header.php"); ?>
 
 <main>
-	<div class="row" class="section">
+	<div class="row" class="container">
     	<div class="col s5 offset-s1">
 
       		<h5><b>ROOMS</b></h5>
@@ -25,6 +25,10 @@
         			}?>
         		</tbody>
         	</table>
+
+        </div>
+
+    </div>
 
 </main>
 

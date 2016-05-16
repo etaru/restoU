@@ -1,6 +1,6 @@
 <!--Myprofile view-->
 <?php include("../header.php"); ?>
-
+  
 <main>
 
   <div class="row" class="section">

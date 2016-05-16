@@ -1,6 +1,6 @@
-<!--Index model-->
+<!--AddMenu model-->
 <?php
-	class INDEX
+	class MENU
 	{
 		//function to retrieve rooms
 		public static function getRoom()
@@ -17,17 +17,18 @@
 			return $rooms;
 		}
 
-		//function to retrieve menus
-		public static function getMenu()
+		public static function addMenu($menu,$name)
 		{
-			//connection database
 			require_once("connexion_bd.php");
 			$bd=connexion_bd();
 
-			$req=$bd->query("SELECT * FROM meal;");
+			//SQL request to change email
+			$req = $bd->prepare('UPDATE meal SET content=:menu WHERE idR.meal=:idR.menu');
 
-			$meals=$req->fetchAll();
+			$req->bindParam(':menu', $menu);
+			$req->bindParam(':name', $name);
 
-			return $meals;
+			$req->execute();
+
 		}
 	}
