@@ -1,6 +1,5 @@
 <!--AddMenu controller
 	functionnality not working-->
-
 <?php
 	
 	//get information of model
@@ -37,23 +36,22 @@
 	    	$idR=$room['idR'];
 		}
 
-		/*if (isset($_POST['menu']) && value!=NULL) {
+		/*if(isset($_POST["idR"]) && isset($_Post["menu"]))
+	    {
+		   $idR = $_POST["idR"];
+		   $menu = $_POST["menu"];
+	    }
 
-			$menu = htmlspecialchars($_POST['menu']);
-			$idR = htmlspecialchars($_POST['idR']);
+	    $idM=array(
+        	'contentNoon' => $contentNoon,
+            'idR' => $idR
+        );
 
-			if(empty($menu)||$idR=NULL) {
-				include_once('../view/addMenuFail.php');
-			}
-			else {
-				MENU::addMenu($menu, $idR);
+        MENU::addMenu($idM);*/
 
-				include_once('../view/addMenuSucces.php');
-			}*/
+		include_once('../view/addMenu.php');
 
-			include_once('../view/addMenu.php');
-
-		}
+	}
 	else {
 		include_once('../controller/login.php');
 	}

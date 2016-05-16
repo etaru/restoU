@@ -24,6 +24,7 @@
 			          <textarea id="menu" class="materialize-textarea" class="validate" name="menu" length="200"></textarea>
 			          <label for="menu">Menu</label>
 			        </div>
+			        
 			        <div class="section center-align">
 					    <div class="chip orange darken-1">
 					      Functionnality not working !

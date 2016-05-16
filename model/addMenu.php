@@ -17,18 +17,17 @@
 			return $rooms;
 		}
 
-		public static function addMenu($menu,$name)
+		public static function addMenu($newMenu)
 		{
 			require_once("connexion_bd.php");
 			$bd=connexion_bd();
 
 			//SQL request to change email
-			$req = $bd->prepare('UPDATE meal SET content=:menu WHERE idR.meal=:idR.menu');
+			$req = $bd->prepare('UPDATE meal SET contentNoon=:menu WHERE idR=:idR');
 
-			$req->bindParam(':menu', $menu);
-			$req->bindParam(':name', $name);
+			$req->execute($newMenu);
 
-			$req->execute();
+			$req->closeCursor();
 
 		}
 	}

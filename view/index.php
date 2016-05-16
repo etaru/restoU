@@ -25,7 +25,7 @@
         <div class="card-content white-text">
           <span class="card-title"><?php print '<strong>'.$name[0].'</strong>' ?></span>
           <h5>
-            Lunch
+            Lunch |
             <?php if (isset($_COOKIE['connected'])){
                   $user = $_COOKIE['connected'];
                   echo "<form class ='opbutton' action='../controller/like.php' method='POST'>
@@ -54,7 +54,7 @@
         <div class="card-content white-text">
           <span class="card-title"><?php print '<strong>'.$name[1].'</strong>' ?></span>
           <h5>
-            Lunch
+            Lunch |
             <?php if (isset($_COOKIE['connected'])){
                   $user = $_COOKIE['connected'];
                   echo "<form class ='opbutton' action='../controller/like.php' method='POST'>
@@ -83,7 +83,7 @@
         <div class="card-content white-text">
           <span class="card-title"><?php print '<strong>'.$name[2].'</strong>' ?></span>
           <h5>
-            Lunch
+            Lunch |
             <?php if (isset($_COOKIE['connected'])){
                   $user = $_COOKIE['connected'];
                   echo "<form class ='opbutton' action='../controller/like.php' method='POST'>
@@ -112,7 +112,7 @@
         <div class="card-content white-text">
           <span class="card-title"><?php print '<strong>'.$name[3].'</strong>' ?></span>
           <h5>
-            Lunch
+            Lunch |
             <?php if (isset($_COOKIE['connected'])){
                   $user = $_COOKIE['connected'];
                   echo "<form class ='opbutton' action='../controller/like.php' method='POST'>
