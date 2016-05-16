@@ -26,11 +26,15 @@
           <span class="card-title"><?php print '<strong>'.$name[0].'</strong>' ?></span>
           <h5>
             Lunch
-            <form class ='opbutton' action='../controller/like.php' method='POST'>
-            <input type='hidden' value='like' name='action'>
-              <button type='submit' name='idL' value=",$idL['0']," class='btn btn-danger'><i class="material-icons">thumb_up</i>
-              </button>
-            </form>
+            <?php if (isset($_COOKIE['connected'])){
+                  $user = $_COOKIE['connected'];
+                  echo "<form class ='opbutton' action='../controller/like.php' method='POST'>
+                  <input type='hidden' value='like' name='action'>
+                  <input type='hidden' value=",$idM[0]," name='meal'>
+                  <input type='hidden' value=",$user," name='user'>
+                  <button type='submit' class='btn btn-danger'><i class='material-icons'>thumb_up</i></button>
+                  </form>"; }?>
+            <?php print 'Likes: <strong>'.$likeCounter[0].'</strong>' ?>
           </h5>
           <h6><?php print $statusNoon[0] ?></h6>
           <p><?php print $contentNoon[0] ?></p>
@@ -54,11 +58,15 @@
           <span class="card-title"><?php print '<strong>'.$name[1].'</strong>' ?></span>
           <h5>
             Lunch
-            <form class ='opbutton' action='../controller/like.php' method='POST'>
-            <input type='hidden' value='like' name='action'>
-              <button type='submit' name='idL' value=",$idL['1']," class='btn btn-danger'><i class="material-icons">thumb_up</i>
-              </button>
-            </form>
+            <?php if (isset($_COOKIE['connected'])){
+                  $user = $_COOKIE['connected'];
+                  echo "<form class ='opbutton' action='../controller/like.php' method='POST'>
+                  <input type='hidden' value='like' name='action'>
+                  <input type='hidden' value=",$idM[1]," name='meal'>
+                  <input type='hidden' value=",$user," name='user'>
+                  <button type='submit' class='btn btn-danger'><i class='material-icons'>thumb_up</i></button>
+                  </form>"; }?>
+            <?php print 'Likes: <strong>'.$likeCounter[1].'</strong>' ?>
           </h5>
           <h6><?php print $statusNoon[1] ?></h6>
           <p><?php print $contentNoon[1] ?></p>
@@ -69,8 +77,8 @@
         <div class="card-action">
           <form class ='opbutton' action='../controller/comment.php' method='POST'>
             <input type='hidden' value='showComment' name='action'>
-              <button type='submit' name='idM' value=",$idM['0']," class='btn btn-danger'>Comment
-                    </button>
+              <?php echo "<button type='submit' name='idM' value=",$idM[1]," class='btn btn-danger'>Comment
+                    </button>";?>
           </form>
         </div>
       </div>
@@ -82,11 +90,15 @@
           <span class="card-title"><?php print '<strong>'.$name[2].'</strong>' ?></span>
           <h5>
             Lunch
-            <form class ='opbutton' action='../controller/like.php' method='POST'>
-            <input type='hidden' value='like' name='action'>
-              <button type='submit' name='idL' value=",$idL['2']," class='btn btn-danger'><i class="material-icons">thumb_up</i>
-              </button>
-            </form>
+            <?php if (isset($_COOKIE['connected'])){
+                  $user = $_COOKIE['connected'];
+                  echo "<form class ='opbutton' action='../controller/like.php' method='POST'>
+                  <input type='hidden' value='like' name='action'>
+                  <input type='hidden' value=",$idM[2]," name='meal'>
+                  <input type='hidden' value=",$user," name='user'>
+                  <button type='submit' class='btn btn-danger'><i class='material-icons'>thumb_up</i></button>
+                  </form>"; }?>
+            <?php print 'Likes: <strong>'.$likeCounter[2].'</strong>' ?>
           </h5>
           <h6><?php print $statusNoon[2] ?></h6>
           <p><?php print $contentNoon[2] ?></p>
@@ -97,8 +109,8 @@
         <div class="card-action">
           <form class ='opbutton' action='../controller/comment.php' method='POST'>
             <input type='hidden' value='showComment' name='action'>
-              <button type='submit' name='idM' value=",$idM['0']," class='btn btn-danger'>Comment
-                    </button>
+              <?php echo "<button type='submit' name='idM' value=",$idM[2]," class='btn btn-danger'>Comment
+                    </button>";?>
           </form>
         </div>
       </div>
@@ -110,11 +122,15 @@
           <span class="card-title"><?php print '<strong>'.$name[3].'</strong>' ?></span>
           <h5>
             Lunch
-            <form class ='opbutton' action='../controller/like.php' method='POST'>
-            <input type='hidden' value='like' name='action'>
-              <button type='submit' name='idL' value=",$idL['3']," class='btn btn-danger'><i class="material-icons">thumb_up</i>
-              </button>
-            </form>
+            <?php if (isset($_COOKIE['connected'])){
+                  $user = $_COOKIE['connected'];
+                  echo "<form class ='opbutton' action='../controller/like.php' method='POST'>
+                  <input type='hidden' value='like' name='action'>
+                  <input type='hidden' value=",$idM[3]," name='meal'>
+                  <input type='hidden' value=",$user," name='user'>
+                  <button type='submit' class='btn btn-danger'><i class='material-icons'>thumb_up</i></button>
+                  </form>"; }?>
+            <?php print 'Likes: <strong>'.$likeCounter[3].'</strong>' ?>
           </h5>
           <h6><?php print $statusNoon[3] ?></h6>
           <p><?php print $contentNoon[3] ?></p>
@@ -125,8 +141,8 @@
         <div class="card-action">
           <form class ='opbutton' action='../controller/comment.php' method='POST'>
             <input type='hidden' value='showComment' name='action'>
-              <button type='submit' name='idM' value=",$idM['0']," class='btn btn-danger'>Comment
-                    </button>
+              <?php echo "<button type='submit' name='idM' value=",$idM[3]," class='btn btn-danger'>Comment
+                    </button>";?>
           </form>
         </div>
       </div>

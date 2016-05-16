@@ -2,13 +2,13 @@
 <?php
 
 	//get information of model
-	include_once('../model/comment.php');
-	include_once('../model/myprofile.php');
+	require_once('../model/comment.php');
+	require_once('../model/myprofile.php');
 
 
 	if (isset($_COOKIE['connected'])) {
    
-	    include_once('../model/login.php');
+	    require_once('../model/login.php');
 
 	    //retrieves users
 	    $users=LOGIN::userEmail();
@@ -98,5 +98,5 @@
 	    }
 	}
 	else {
-		include_once('../controller/login.php');
+		require_once('../controller/login.php');
 	}

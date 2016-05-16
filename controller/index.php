@@ -2,7 +2,8 @@
 <?php
 	
 	//get information of model
-	include_once('../model/index.php');
+	require_once('../model/index.php');
+	require_once('../model/like.php');
 
 	$rooms=INDEX::getRoom();
 
@@ -19,6 +20,16 @@
     	$contentEvening[]=$meal['contentEvening'];
     	$likeCounter[]=$meal['likeCounter'];
     	$idM[]=$meal['idM'];
+
+    	$tab=array(
+	    	'meal' => $meal[0]
+		);
+	}
+
+	$likes=LIKE::getLikes($tab);
+
+	foreach ($likes as $like) {
+		$likeCounter[]=$like['likeCounter'];
 	}
 
 	include_once("../view/index.php");
