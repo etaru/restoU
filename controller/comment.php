@@ -3,6 +3,8 @@
 
 	//get information of model
 	include_once('../model/comment.php');
+	include_once('../model/myprofile.php');
+
 
 	if (isset($_COOKIE['connected'])) {
    
@@ -58,23 +60,31 @@
 	    		if(isset($_POST["comment"])) {
 
 					$comment = $_POST["comment"];
-	                $meal = $_POST["idM"];
-	                $check=array(
-	                    'idUser' => $_POST['user'],
-	                    'meal' => $_POST['idM']
-	                    );
+	                $meal = $_POST["meal"];
+	                $user = $_POST['user'];
+
+	                $tabU=array(
+	        			'user' => $user,
+	    			);
+
 		
-	                    $idM=array(
-	                        'meal' => $_POST['idM']
-	                        );
+                    $idM=array(
+                    	'comment' => $comment,
+	                	'idUser' => INFO::getId($tabU)[0],
+                        'meal' => $meal
+                        );
 
-	                   	COMMENT::addComment($idM);
+                   	COMMENT::addComment($idM);
 
-	                    echo "<script>alert(\"comment added\")</script>";
+                    echo "<script>alert(\"comment added\")</script>";
 
-	                    $comments=COMMENT::getAllComments($idM);
+                    $com=array(
+                        'meal' => $_POST['meal']
+                        );
 
-	                    include_once('../view/comment.php');
+                    $comments=COMMENT::getAllComments($com);
+
+                    include_once('../view/comment.php');
 	            }
 	            else
 	            {

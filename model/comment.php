@@ -10,13 +10,13 @@
 			require_once("connexion_bd.php");
 			$bd=connexion_bd();
 
-			$req = $bd->prepare('SELECT comment FROM comment WHERE idM = :idM');
+			$req = $bd->prepare('SELECT * FROM comment WHERE idM = :meal');
 
 			$req->execute($idM);
 
-			$data = $req->fetchAll();
+			$comments = $req->fetchAll();
 
-			return $data;
+			return $comments;
 
 			$req->closeCursor();
 
@@ -28,7 +28,7 @@
 			require_once("connexion_bd.php");
 			$bd=connexion_bd();
 
-			$req = $bd->prepare('INSERT INTO comment VALUES (:idUser, :idM, :comment)');
+			$req = $bd->prepare('INSERT INTO comment VALUES (:comment, :meal, :idUser)');
 
 			$req->execute($newComment);
 

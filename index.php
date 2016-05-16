@@ -1,2 +1,5 @@
 <!--Index-->
-<?php include('controller/index.php'); ?>
+
+<?php 
+	header('Location: controller/index.php');
+ ?>

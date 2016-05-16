@@ -41,8 +41,8 @@
         <div class="card-action">
           <form class ='opbutton' action='../controller/comment.php' method='POST'>
             <input type='hidden' value='showComment' name='action'>
-              <button type='submit' name='idM' value=",$idM['0']," class='btn btn-danger'>Comment
-                    </button>
+              <?php echo "<button type='submit' name='idM' value=",$idM[0]," class='btn btn-danger'>Comment
+                    </button>";?>
           </form>
         </div>
       </div>
