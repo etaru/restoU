@@ -33,8 +33,6 @@
 		foreach ($rooms as $room) {
 	    	$name=$room['name'];
 	    	$statusNoon=$room['statusNoon'];
-	    	$statusEvening=$room['statusEvening'];
-
 		}
 
 		include_once('../view/room.php');

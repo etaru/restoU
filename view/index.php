@@ -38,9 +38,6 @@
           </h5>
           <h6><?php print $statusNoon[0] ?></h6>
           <p><?php print $contentNoon[0] ?></p>
-          <h5>Diner</h5>
-          <h6><?php print $statusEvening[0] ?></h6>
-          <p><?php print $contentEvening[0] ?></p>
         </div>
         <div class="card-action">
           <form class ='opbutton' action='../controller/comment.php' method='POST'>
@@ -70,9 +67,6 @@
           </h5>
           <h6><?php print $statusNoon[1] ?></h6>
           <p><?php print $contentNoon[1] ?></p>
-          <h5>Diner</h5>
-          <h6><?php print $statusEvening[1] ?></h6>
-          <p><?php print $contentEvening[1] ?></p>
         </div>
         <div class="card-action">
           <form class ='opbutton' action='../controller/comment.php' method='POST'>
@@ -102,9 +96,6 @@
           </h5>
           <h6><?php print $statusNoon[2] ?></h6>
           <p><?php print $contentNoon[2] ?></p>
-          <h5>Diner</h5>
-          <h6><?php print $statusEvening[2] ?></h6>
-          <p><?php print $contentEvening[2] ?></p>
         </div>
         <div class="card-action">
           <form class ='opbutton' action='../controller/comment.php' method='POST'>
@@ -134,9 +125,6 @@
           </h5>
           <h6><?php print $statusNoon[3] ?></h6>
           <p><?php print $contentNoon[3] ?></p>
-          <h5>Diner</h5>
-          <h6><?php print $statusEvening[3] ?></h6>
-          <p><?php print $contentEvening[3] ?></p>
         </div>
         <div class="card-action">
           <form class ='opbutton' action='../controller/comment.php' method='POST'>

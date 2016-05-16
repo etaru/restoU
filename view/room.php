@@ -13,15 +13,13 @@
         			<tr>
         				<th>Name</th>
         				<th>Lunch</th>
-                        <th>Diner</th>
         			</tr>
         		</thead>
 
         		<tbody>
         			<?php foreach ($rooms as $room) {
         				print "<tr> <td>" .  $room["name"] . "</td>";
-        				print "<td>" .  $room["statusNoon"] . "</td>";
-                        print "<td>" .  $room["statusEvening"] . "</td> </tr>";
+        				print "<td>" .  $room["statusNoon"] . "</td></tr>";
         			}?>
         		</tbody>
         	</table>
