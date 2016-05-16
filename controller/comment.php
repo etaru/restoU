@@ -30,13 +30,11 @@
 	      $isadmin=$admin["admin"];
 	    }
 
-		//Get the value of the input action in the view and create an action variable
 		if(isset($_POST["action"]))
 	    {
 		   $action = $_POST["action"];
 	    }
 
-	    //Check the value of the action variable and do the specified calls
 	    switch($action) {
 
 	    	case 'showComment':

@@ -9,10 +9,10 @@
 		        <table class="table table-stripped">
 
 		        <tr>
-		            <th>COMMENT</th></tr>
+		            <th>COMMENTS</th></tr>
 
 				<?php
-				//Use the return of the Model comment for each comments 
+				
 				foreach($comments as $comment)
 				{
 		    		echo "<tr>
@@ -26,7 +26,7 @@
 
 
 				<?php
-					//If the user is connected, he can add his comment about the candy BUT ONLY ONE comment CAN BE WRITTEN
+
 					if (isset($_COOKIE['connected']))
 					{
 						
