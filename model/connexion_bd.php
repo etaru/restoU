@@ -4,7 +4,7 @@
 	{
 		try
 		{
-			$bd = new PDO('mysql:host=127.4.194.2:3306;dbname=checkmymenu;charset=utf8', 'adminSp26JtB', 'IfFy4TC6abUL');
+			$bd = new PDO('mysql:host=localhost;dbname=checkmymenu;charset=utf8', 'root', '');
 		}
 		catch (Exception $e)
 		{
